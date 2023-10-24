@@ -1,71 +1,95 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>Nastya</title>
-</head>
-<body>
-    <img src="photo.jpg" width="250"/>
-    <h1>Владимирцева Анастасия Александровна</h1>
-    <hr size="3" color="grey" noshade>
-    
-    <h2>Обо мне:</h2>
-    <p>Полных лет: 18</p>
-    <p>Родной город: Оренбург</p>
-    <p>Образование: МОАУ Лицей № 5 имени Героя Российской Федерации А.Ж. Зеленко</p>
-    <hr color="grey" size="3">
-    <h2>Контактная информация:</h2>
-    <ul>
-        <li>
-            <img src="vk.jpg" alt="Упс!" width="30">
-            <a href="https://vk.com/id179477127" target="_blank">VK</a>
-        </li>
-        <li>
-            <img src="inst.jpg" alt="Упс!" width="30">
-            <a href="https://instagram.com/_anastasiya_vladimirceva_" target="_blank">Instagram</a>
-        </li>
-        <li>
-            <img src="telegrem.png" alt="Упс!" width="30">
-            <a href="https://t.me/nastya_vladimirceva" target="_blank">Telegram</a>
-        </li>
-    </ul>
-    <hr size="3" color="grey">
+  <head>
+    <meta charset="UTF-8" />
+    <title>About me</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="info">
+        <img src="photo.jpg" alt="тут моя фотка" class="avatar" />
 
-    <h2>Мои работы:</h2>
-    <table >
-        <tr>
-            <th>
-                <img src="lms.png" alt="Здесь могла быть ваша реклама!" width="50">
-                <a href="https://lyceum.yandex.ru/">Яндекс.Лицей</a></th>
-            <th>
-                <img src="mtuci.jpeg" alt="Здесь могла быть ваша реклама!" width="50">
-                <a href="https://mtuci.ru/">МТУСИ</a></th>
-        </tr>
+        <div class="info-text">
+          <h1>Владимирцева Анастасия Александровна</h1>
+          <h2>Обо мне:</h2>
+          <p>Полных лет: 18</p>
+          <p>Родной город: Оренбург</p>
+          <p>Образование: МОАУ Лицей № 5 имени Героя Российской Федерации А.Ж. Зеленко</p>
 
-        <tr>
-            <td><a href="https://github.com/AnastasiaVladimirceva/SWAP/tree/master">Swap</a></td>
-            <td><a href="https://github.com/AnastasiaVladimirceva/it">FastAPI</a></td>
-        </tr>
+          <h4>Мои социальные сети</h4>
+          
+          <img src="vk.png" alt="Упс!" width="20">
+          <a href="https://vk.com/id179477127" target="_blank">VK</a>
+          |
+          <img src="instagram.png" alt="Упс!" width="20">
+          <a href="https://instagram.com/_anastasiya_vladimirceva_" target="_blank">Instagram</a>
+          |
+          <img src="telegrem.png" alt="Упс!" width="20">
+          <a href="https://t.me/nastya_vladimirceva" target="_blank">Telegram</a>
+        </div>
         
-    </table>
-    <hr size="3" color="grey">
-    <form action="/">
-        <label for="name">Ваше имя:</label>
-        <input type="text" id="name" placeholder="Введите Ваше имя...">
-        <br>
-        <label for="email">Ваш email:</label>
-        <input type="email" id="email" placeholder="Введите Ваш email...">
-        <br>
-        <label for="text">Ваше сообщение</label>
-        <br>
-        <textarea name="text" id="text" cols="30" rows="10"></textarea>
-        <br>
-        <input type="submit" value="Связаться">
+      </div>
+
+      <div class="card bg_white_pink">
+        <a href="javascript:void(0)" onclick="showHide('block_id')">Мои хобби</a>
+        <div id="block_id" style="display: none;">
+            <ol class="list">
+            <li>Режиссура</li>
+            <li>Фотоискусство</li>  
+            <li>Танцы</li>
+            <li>Путешествия</li>
+            </ol>
+        </div>
+      </div>
+
+      
+      <div class="card bg_white_pink">
+        <h2>Мои работы</h2>
+        <table class="table">
+          <tr>
+            <td><a href="https://lyceum.yandex.ru/" target="_blank">Яндекс.Лицей</a></td>
+            <td><a href="https://github.com/AnastasiaVladimirceva/SWAP/tree/master" target="_blank">Swap</a></td>
+            <td>2021</td>
+          </tr>
+          <tr>
+            <td><a href="https://mtuci.ru/" target="_blank">МТУСИ</a></td>
+            <td><a href="https://github.com/AnastasiaVladimirceva/it" target="_blank">FastAPI</a></td>
+            <td>2023</td>
+          </tr>
+        </table>
+      </div>
 
 
-    </form>
+      <div class="contact">
+        <h2>Связаться со мной</h2>
 
+        <form action="">
+          <div class="row">
+            <div class="form-group">
+              <label for="name">Ваше имя:</label>
+              <input type="text" id="name" placeholder="Введите ваше имя...">
+            </div>
 
+            <div class="form-group">
+              <label for="email">Ваш email:</label>
+              <input type="email" id="email" placeholder="Введите email...">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="text">Вашe сообщение:</label>
+            
+            <textarea id="text" rows="2" cols="15"></textarea>
+          </div>
 
-</body>
+          <input class="btn" type="submit" value="Связаться!">
+        </form>
+      </div>
+
+    </div>
+
+    <script src="main.js">
+    </script>
+  </body>
 </html>
